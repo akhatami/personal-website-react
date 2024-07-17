@@ -1,0 +1,53 @@
+.contact-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-content li {
+    margin-bottom: 0.5rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ccc;
+}
+
+.publications,
+.contact-page,
+.contact-content {
+    display: flex;
+    min-height: 90vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+.publications h2,
+.contact-content h2 {
+    text-align: center;
+}
+
+.publications .publication,
+.contact-content {
+    max-width: 600px;
+    width: 100%;
+}

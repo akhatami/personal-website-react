@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Play:wght@400;700&display=swap');
+
+.home-page {
+    min-height: 90vh;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Merriweather', sans-serif;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.content {
+    text-align: left;
+    max-width: 900px;
+    padding: 2rem;
+}
+
+.name {
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.tagline {
+    font-family: 'Merriweather', serif;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.bio {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ccc;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    font-family: 'Barlow Condensed', sans-serif;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        max-width: 90%;
+    }
+
+    .name {
+        font-size: 2.5rem;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+    }
+
+    .bio {
+        font-size: 1rem;
+    }
+
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-link {
+        margin-bottom: 1rem;
+    }
+}
+
+.home-page.dark {
+    background-color: #000;
+    color: #fff;
+}
+
+.home-page.less-dark {
+    background-color: #222;
+    color: #ccc;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Courier New', monospace;
+    font-size: 1.2rem;
+}
+
+a:hover {
+    color: #ffffff;
+    text-decoration: line-through;
+}
+
+.info-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.research-interests,
+.education {
+    flex: 1;
+    padding: 1rem;
+}
+
+.research-interests h2,
+.education h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.research-interests h2 svg,
+.education h2 svg {
+    margin-right: 0.5rem;
+}
+
+.research-interests ul,
+.education ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.research-interests li,
+.education li {
+    margin-bottom: 0.5rem;
+}
+
+.education li i {
+    font-style: italic;
+}
+
+@media screen and (max-width: 768px) {
+    .info-container {
+        flex-direction: column;
+    }
+}
+
+.education .description {
+    color: #cccccc;
+    font-size: smaller;
+}
+
+.intro-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.intro-text {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.intro-image {
+    flex: 1;
+    text-align: center;
+}
+
+.intro-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.image-caption {
+    font-style: italic;
+}
+
+@media screen and (max-width: 768px) {
+    .intro-container {
+        flex-direction: column;
+    }
+
+    .intro-text {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+}

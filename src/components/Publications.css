@@ -1,0 +1,63 @@
+.publications-page {
+    min-height: 90vh;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Merriweather', sans-serif;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.publications-content {
+    max-width: 800px;
+    width: 100%;
+    padding: 2rem;
+}
+
+.publication {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #1a1a1a;
+    border-radius: 4px;
+}
+
+.publication h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.publication p {
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+}
+
+a:hover {
+    color: #ffffff;
+    text-decoration: line-through;
+}
+
+.publications,
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.publications h2,
+.contact-content h2 {
+    text-align: center;
+}
+
+.publications .publication,
+.contact-content {
+    max-width: 900px;
+    width: 100%;
+}
+
+.publication a {
+    font-size: 0.8rem;
+    word-wrap: break-word;
+}
