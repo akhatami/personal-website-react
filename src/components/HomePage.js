@@ -12,13 +12,10 @@ const HomePage = () => {
             <div className="home-page">
                 <div className="content">
                     <div className="intro-image">
-                        {/*<img src="/avatar-personal.jpg" alt="Ali Khatami" />*/}
                         <h1 className="name">Ali Khatami</h1>
                         <p className="tagline">PhD Candidate in Software Engineering<br />Delft University of Technology</p>
                     </div>
-                    {/*<div className="intro-container">*/}
                         <div className="intro-text">
-                            {/*<h1>About Me</h1>*/}
                             <p className="bio">
                                 As a PhD candidate in the Software Engineering Research Group (SERG) at TU Delft, I'm passionate about empowering software developers to
                                 create high-quality software. My research focuses on software quality analytics by providing developers with
@@ -28,7 +25,6 @@ const HomePage = () => {
                                 <a href="/interests">Me beyond academy</a>
                             </p>
                         </div>
-                    {/*</div>*/}
                 <div className="info-container">
                     <div className="research-interests">
                         <h2><FontAwesomeIcon icon={faBook} /> Research Interests</h2>

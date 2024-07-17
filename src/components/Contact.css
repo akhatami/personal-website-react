@@ -46,8 +46,13 @@
     text-align: center;
 }
 
-.publications .publication,
 .contact-content {
     max-width: 600px;
     width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .contact-content {
+        padding: 2rem;
+    }
 }

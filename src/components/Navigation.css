@@ -26,3 +26,9 @@
     color: #ffffff;
     text-decoration: line-through;
 }
+
+@media screen and (max-width: 600px) {
+    .navigation {
+        padding: 0.3rem;
+    }
+}

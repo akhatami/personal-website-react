@@ -80,33 +80,6 @@
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-@media screen and (max-width: 768px) {
-    .content {
-        max-width: 90%;
-    }
-
-    .name {
-        font-size: 2.5rem;
-    }
-
-    .tagline {
-        font-size: 1.2rem;
-    }
-
-    .bio {
-        font-size: 1rem;
-    }
-
-    .navigation {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav-link {
-        margin-bottom: 1rem;
-    }
-}
-
 .home-page.dark {
     background-color: #000;
     color: #fff;
@@ -211,13 +184,37 @@ a:hover {
     font-style: italic;
 }
 
-@media screen and (max-width: 768px) {
-    .intro-container {
+@media screen and (max-width: 600px) {
+    .container {
         flex-direction: column;
     }
 
     .intro-text {
         padding-right: 0;
         margin-bottom: 2rem;
+    }
+
+    .content {
+        max-width: 100%;
+    }
+
+    .name {
+        font-size: 2.5rem;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+    }
+
+    .bio {
+        font-size: 1rem;
+    }
+
+    .nav-link {
+        margin-bottom: 1rem;
+    }
+
+    .home-page {
+        padding: 0;
     }
 }

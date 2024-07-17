@@ -61,3 +61,12 @@ a:hover {
     font-size: 0.8rem;
     word-wrap: break-word;
 }
+
+@media screen and (max-width: 600px) {
+    .publications-page {
+        padding: 0;
+    }
+    .publication h3 {
+        font-size: 1rem;
+    }
+}
