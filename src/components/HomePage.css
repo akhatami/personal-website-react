@@ -217,4 +217,8 @@ a:hover {
     .home-page {
         padding: 0;
     }
+
+    .tagline {
+        font-size: 0.9rem;
+    }
 }

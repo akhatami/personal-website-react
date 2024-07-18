@@ -41,15 +41,15 @@ const HomePage = () => {
                         <ul>
                             <li>
                                 <i>PhD in Software Engineering, 2025</i>
-                                <div className="description">Delft University of Technology</div>
+                                <div className="description">Delft University of Technology, NL</div>
                             </li>
                             <li>
                                 <i>MSc in Software Engineering, 2021</i>
-                                <div className="description">Sharif University of Technology</div>
+                                <div className="description">Sharif University of Technology, IR</div>
                             </li>
                             <li>
-                                <i>Bachelor in Software Engineering, 2017</i>
-                                <div className="description">Azad University, South-Tehran branch</div>
+                                <i>BSc in Software Engineering, 2017</i>
+                                <div className="description">Azad University South Tehran Branch, IR</div>
                             </li>
                         </ul>
                     </div>
