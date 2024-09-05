@@ -58,6 +58,7 @@
 
 .social-links a:hover {
     color: #ccc;
+    cursor: pointer;
 }
 
 .navigation {

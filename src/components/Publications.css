@@ -36,6 +36,7 @@
 a:hover {
     color: #ffffff;
     text-decoration: line-through;
+    cursor: pointer;
 }
 
 .publications,
