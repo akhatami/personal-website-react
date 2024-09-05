@@ -2,7 +2,7 @@ import React from 'react';
 import  Navigation  from './Navigation';
 import './Publications.css';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faGithub, faGoogle, faLinkedin} from "@fortawesome/free-brands-svg-icons";
+import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 import {faBook, faGraduationCap} from "@fortawesome/free-solid-svg-icons";
 
 const Publications = () => {
