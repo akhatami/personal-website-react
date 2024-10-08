@@ -3,7 +3,7 @@ import  Navigation  from './Navigation';
 import './Publications.css';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
-import {faBook, faGraduationCap} from "@fortawesome/free-solid-svg-icons";
+import {faVideo, faBook, faGraduationCap} from "@fortawesome/free-solid-svg-icons";
 
 const Publications = () => {
     const publications = [
@@ -14,6 +14,7 @@ const Publications = () => {
             year: 2024,
             link: 'https://azaidman.github.io/publications/khatamiSCAM2024a.pdf',
             linkTitle: 'Pre-print',
+            video: 'https://drive.google.com/file/d/1ZiXGRMzfHxszokLVm5oPOWbUPcljMDyh/view?usp=sharing',
         },
         {
             title: 'Catching Smells in the Act: A GitHub Actions Workflow Investigation',
@@ -22,6 +23,7 @@ const Publications = () => {
             year: 2024,
             link: 'https://azaidman.github.io/publications/khatamiSCAM2024b.pdf',
             linkTitle: 'Pre-print',
+            video: 'https://drive.google.com/file/d/1nlePx_q9vIDHVaQopmuu8QsCSHxQe8S5/view?usp=sharing',
         },
         {
             title: 'State‐of‐the‐Practice in Quality Assurance in Java‐Based Open Source Software Development',
@@ -57,22 +59,21 @@ const Publications = () => {
                     {publications.map((publication, index) => (
                         <div key={index} className="publication">
                             <h3><FontAwesomeIcon icon={faBook} />{' '}{publication.title}</h3>
-                            <p>
-                                {/*<strong>Authors:</strong> */}
-                                {publication.authors}
-                            </p>
-                            <p>
-                                {/*<strong>Venue:</strong> */}
-                                {publication.venue}
-                            </p>
-                            <p>
-                                {/*<strong>Year:</strong> */}
-                                {publication.year}
-                            </p>
+                            <p>{publication.authors}</p>
+                            <p>{publication.venue}</p>
+                            <p>{publication.year}</p>
                             <p>
                                 <a href={publication.link} target="_blank" rel="noopener noreferrer">
                                     {publication.linkTitle}
                                 </a>
+                                {publication.video && (
+                                    <>
+                                        {' | '}
+                                        <a href={publication.video} target="_blank" rel="noopener noreferrer">
+                                            <FontAwesomeIcon icon={faVideo} /> Video
+                                        </a>
+                                    </>
+                                )}
                             </p>
                         </div>
                     ))}
