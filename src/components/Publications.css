@@ -170,3 +170,7 @@ a:hover {
 .summary-text-section p {
     font-size: 0.9rem;
 }
+
+.summary-toggle .fa-spinner {
+    margin-right: 5px;
+}

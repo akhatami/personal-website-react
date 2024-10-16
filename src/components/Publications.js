@@ -4,10 +4,11 @@ import  Navigation  from './Navigation';
 import './Publications.css';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
-import {faVideo, faBook, faGraduationCap, faDatabase, faFileAlt, faLink, faChevronDown, faChevronUp} from "@fortawesome/free-solid-svg-icons";
+import {faVideo, faBook, faGraduationCap, faDatabase, faFileAlt, faLink, faChevronDown, faChevronUp, faSpinner} from "@fortawesome/free-solid-svg-icons";
 const Publications = ({publication}) => {
     const [expandedSummaries, setExpandedSummaries] = useState({});
     const [parsedSummaries, setParsedSummaries] = useState({});
+    const [loadingSummaries, setLoadingSummaries] = useState({});
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const publications = [
@@ -72,22 +73,24 @@ const Publications = ({publication}) => {
         const fetchSummaries = async () => {
             for (const pub of publications) {
                 if (pub.summaryFile) {
-                    console.log(pub.summaryFile);
+                    setLoadingSummaries(prev => ({ ...prev, [pub.id]: true }));
                     try {
                         const response = await fetch(pub.summaryFile);
-                        console.log(response);
                         const content = await response.text();
                         const parsed = parseMarkdown(content);
                         setParsedSummaries(prev => ({ ...prev, [pub.id]: parsed }));
                     } catch (error) {
                         console.error(`Error fetching summary for publication ${pub.id}:`, error);
+                    } finally {
+                        setLoadingSummaries(prev => ({ ...prev, [pub.id]: false }));
                     }
                 }
             }
         };
 
         fetchSummaries();
-    }, [publications]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const parseMarkdown = (md) => {
         const tokens = marked.lexer(md);
@@ -151,9 +154,19 @@ const Publications = ({publication}) => {
                             </div>
                             {parsedSummaries[publication.id] && (
                                 <div className="summary-section">
-                                    <button onClick={() => toggleSummary(publication.id)} className="summary-toggle">
-                                        {expandedSummaries[publication.id] ? 'Hide' : 'Show'} Summary{' '}
-                                        <FontAwesomeIcon icon={expandedSummaries[publication.id] ? faChevronUp : faChevronDown} />
+                                    <button
+                                        onClick={() => toggleSummary(publication.id)}
+                                        className="summary-toggle"
+                                        disabled={loadingSummaries[publication.id]}
+                                    >
+                                        {loadingSummaries[publication.id] ? (
+                                            <FontAwesomeIcon icon={faSpinner} spin />
+                                        ) : (
+                                            <>
+                                                {expandedSummaries[publication.id] ? 'Hide' : 'Show'} Summary{' '}
+                                                <FontAwesomeIcon icon={expandedSummaries[publication.id] ? faChevronUp : faChevronDown} />
+                                            </>
+                                        )}
                                     </button>
                                     {expandedSummaries[publication.id] && (
                                         <div className="summary-content">
