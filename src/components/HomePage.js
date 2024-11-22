@@ -2,7 +2,7 @@ import React from 'react';
 import './HomePage.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faBook, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import { faBrain, faGraduationCap, faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import Navigation from "./Navigation";
 const HomePage = () => {
 
@@ -13,27 +13,45 @@ const HomePage = () => {
                 <div className="content">
                     <div className="intro-image">
                         <h1 className="name">Ali Khatami</h1>
-                        <p className="tagline">PhD Candidate in Software Engineering<br />Delft University of Technology</p>
+                        <p className="tagline">Software Engineer | Full-Stack Developer | Data Engineer
+                            {/*<br />Delft University of Technology*/}
+                        </p>
                     </div>
                         <div className="intro-text">
                             <p className="bio">
-                                As a PhD candidate in the Software Engineering Research Group (SERG) at TU Delft, I'm passionate about empowering software developers to
-                                create high-quality software. My research focuses on software quality analytics by providing developers with
-                                actionable insights and raising their situational awareness of quality assurance practices.
-                                My goal is to equip software engineers with the tools and knowledge they need to make data-driven decisions, optimize their QA processes,
-                                and consistently deliver high-quality software. <br />
-                                <a href="/interests">Me beyond academy</a>
+                               <p>
+                                   Hi! I am a <strong>software engineer</strong> and <strong>PhD candidate</strong> at TU Delft's Software Engineering Research Group. I combine <strong>software development</strong> expertise with research in <strong>software quality analytics</strong>.
+                               </p>
+
+                               <p>
+                                   Through my work in both academia and industry, I have developed a unique perspective on building high-quality software systems, bringing together <strong>software engineering</strong> principles and <strong>data-driven approaches</strong>.
+                               </p>
+
+                               <p>
+                                   I am seeking <strong>Software Engineering / Data Engineering roles</strong> where I can create meaningful impact. Open to related opportunities in the Netherlands.
+                               </p>
                             </p>
                         </div>
                 <div className="info-container">
                     <div className="research-interests">
-                        <h2><FontAwesomeIcon icon={faBook} /> Research Interests</h2>
+                        <h2><FontAwesomeIcon icon={faBriefcase} /> Technical Exp</h2>
                         <ul>
-                            <li>Software Quality Assurance</li>
-                            <li>Software Analytics</li>
-                            <li>Empirical Software Engineering</li>
-                            <li>Software Evolution</li>
-                            <li>Software Testing</li>
+                            <li>Build Data Analytics Dashboards</li>
+                            <li>Developed API Integrations</li>
+                            <li>Built Data Pipelines</li>
+                            <li>Built Web Applications</li>
+                        </ul>
+                    </div>
+                    <div className="research-interests">
+                        <h2><FontAwesomeIcon icon={faBrain} /> Core Strengths</h2>
+                        <ul>
+                            <li>Full-Stack Development</li>
+                            <li>System Architecture</li>
+                            <li>Problem-Solving Mindset</li>
+                            <li>Data Engineering & Analytics</li>
+                            <li>Fast Learner & Proactive</li>
+                            <li>Team Collaboration</li>
+                            <li>Communication</li>
                         </ul>
                     </div>
                     <div className="education">
