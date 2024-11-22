@@ -8,14 +8,14 @@
     justify-content: center;
     align-items: center;
     font-family: 'Merriweather', sans-serif;
-    padding: 2rem;
+    padding: 2rem 2rem 0;
     box-sizing: border-box;
 }
 
 .content {
     text-align: left;
     max-width: 1000px;
-    padding: 2rem;
+    padding: 2rem 2rem 0;
 }
 
 .name {
