@@ -13,7 +13,7 @@ const HomePage = () => {
                 <div className="content">
                     <div className="intro-image">
                         <h1 className="name">Ali Khatami</h1>
-                        <p className="tagline">Software Engineer | Full-Stack Developer | Data Engineer
+                        <p className="tagline">Software Engineer | Data Engineer | Full-Stack Developer
                             {/*<br />Delft University of Technology*/}
                         </p>
                     </div>
@@ -43,7 +43,7 @@ const HomePage = () => {
                         </ul>
                     </div>
                     <div className="research-interests">
-                        <h2><FontAwesomeIcon icon={faBrain} /> Core Strengths</h2>
+                        <h2><FontAwesomeIcon icon={faBrain} /> Core Skills</h2>
                         <ul>
                             <li>Full-Stack Development</li>
                             <li>System Architecture</li>
