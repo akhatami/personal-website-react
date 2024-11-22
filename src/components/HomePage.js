@@ -20,7 +20,7 @@ const HomePage = () => {
                         <div className="intro-text">
                             <p className="bio">
                                <p>
-                                   Hi! I am a <strong>software engineer</strong> and <strong>PhD candidate</strong> at TU Delft's Software Engineering Research Group. I combine <strong>software development</strong> expertise with research in <strong>software quality analytics</strong>.
+                                   Hi! I'm a <strong>software engineer</strong> and <strong>PhD candidate</strong> at TU Delft's Software Engineering Research Group. I combine <strong>software development</strong> expertise with research in <strong>software quality analytics</strong>.
                                </p>
 
                                <p>
@@ -28,10 +28,14 @@ const HomePage = () => {
                                </p>
 
                                <p>
-                                   I am seeking <strong>Software Engineering / Data Engineering roles</strong> where I can create meaningful impact. Open to related opportunities in the Netherlands.
+                                   I'm seeking <strong>Software Engineering / Data Engineering roles</strong> where I can create meaningful impact. Open to related opportunities in the Netherlands.
                                </p>
+                                <a href="mailto:sakhaatami@gmail.com">
+                                    Contact Me
+                                </a>
                             </p>
                         </div>
+
                 <div className="info-container">
                     <div className="research-interests">
                         <h2><FontAwesomeIcon icon={faBriefcase} /> Technical Exp</h2>
