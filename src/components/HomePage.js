@@ -20,11 +20,11 @@ const HomePage = () => {
                         <div className="intro-text">
                             <p className="bio">
                                <p>
-                                   Hi! I'm a <strong>software engineer</strong> and <strong>PhD candidate</strong> at TU Delft's Software Engineering Research Group. I combine <strong>software development</strong> expertise with research in <strong>software quality analytics</strong>.
+                                   Hi! I'm a <strong>software engineer</strong> and <strong>PhD candidate</strong> at TU Delft's Software Engineering Research Group. I combine <strong>software engineering</strong> expertise with research in <strong>software quality analytics</strong>.
                                </p>
 
                                <p>
-                                   Through my work in both academia and industry, I have developed a unique perspective on building high-quality software systems, bringing together <strong>software engineering</strong> principles and <strong>data-driven approaches</strong>.
+                                   Through my work in both academia and industry, I have developed a unique perspective on building software systems, bringing together software engineering principles and data-driven approaches.
                                </p>
 
                                <p>
@@ -40,17 +40,18 @@ const HomePage = () => {
                     <div className="research-interests">
                         <h2><FontAwesomeIcon icon={faBriefcase} /> Technical Exp</h2>
                         <ul>
-                            <li>Build Data Analytics Dashboards</li>
-                            <li>Developed API Integrations</li>
-                            <li>Built Data Pipelines</li>
-                            <li>Built Web Applications</li>
+                            <li>Designed and Implemented: </li>
+                            <li>● Data analytics Dashboards</li>
+                            <li>● API Integrations</li>
+                            <li>● Data Analysis Pipelines</li>
+                            <li>● Web Applications</li>
                         </ul>
                     </div>
                     <div className="research-interests">
                         <h2><FontAwesomeIcon icon={faBrain} /> Core Skills</h2>
                         <ul>
                             <li>Full-Stack Development</li>
-                            <li>System Architecture</li>
+                            <li>Software Architecture</li>
                             <li>Problem-Solving Mindset</li>
                             <li>Data Engineering & Analytics</li>
                             <li>Fast Learner & Proactive</li>
