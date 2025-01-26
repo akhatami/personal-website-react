@@ -1,13 +1,8 @@
 import React from 'react';
 import './HomePage.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faBrain, faGraduationCap, faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import Navigation from "./Navigation";
 import About from "./About";
 import SocialLinks from "./SocialLinks";
-import Projects from "./Projects";
-import Education from "./Education";
 const HomePage = () => {
 
     return (
