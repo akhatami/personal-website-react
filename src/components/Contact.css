@@ -1,58 +1,43 @@
-.contact-content h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.contact-content ul {
-    list-style: none;
-    padding: 0;
-}
-
-.contact-content li {
-    margin-bottom: 0.5rem;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-}
-
-.social-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-    color: #ccc;
-}
-
-.publications,
-.contact-page,
-.contact-content {
-    display: flex;
+.contact {
     min-height: 90vh;
+    background-color: #000; /* Matches the home-page background */
+    color: #fff;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: left;
-}
-
-.publications h2,
-.contact-content h2 {
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
     text-align: center;
 }
 
-.contact-content {
-    max-width: 600px;
-    width: 100%;
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-@media screen and (max-width: 600px) {
-    .contact-content {
-        padding: 2rem;
-    }
+.contact p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
 }
+
+.contact-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #1e90ff; /* Button background color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #63b3ed; /* Button hover color */
+}
+

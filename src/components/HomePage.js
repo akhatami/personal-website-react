@@ -4,92 +4,73 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faBrain, faGraduationCap, faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import Navigation from "./Navigation";
+import About from "./About";
+import SocialLinks from "./SocialLinks";
+import Projects from "./Projects";
+import Education from "./Education";
 const HomePage = () => {
 
     return (
         <>
             <Navigation />
-            <div className="home-page">
+            <section className="home-page">
+                {/* Hero Section */}
                 <div className="content">
                     <div className="intro-image">
+                        <img src="avatar-personal.jpg" alt="Ali Khatami" className="profile-photo" />
                         <h1 className="name">Ali Khatami</h1>
-                        <p className="tagline">Software Engineer | Data Engineer | Full-Stack Developer
+                        <p className="tagline">PhD Candidate & Data-Driven Software Engineer
                             {/*<br />Delft University of Technology*/}
                         </p>
                     </div>
-                        <div className="intro-text">
-                            <p className="bio">
-                               <p>
-                                   Hi! I'm a <strong>software engineer</strong> and <strong>PhD candidate</strong> at TU Delft's Software Engineering Research Group. I combine <strong>software engineering</strong> expertise with research in <strong>software quality analytics</strong>.
-                               </p>
-
-                               <p>
-                                   Through my work in both academia and industry, I have developed a unique perspective on building software systems, bringing together software engineering principles and data-driven approaches.
-                               </p>
-
-                               <p>
-                                   I'm seeking <strong>Software Engineering / Data Engineering roles</strong> where I can create meaningful impact. Open to related opportunities in the Netherlands.
-                               </p>
-                                <a href="mailto:sakhaatami@gmail.com">
-                                    Contact Me
-                                </a>
-                            </p>
-                        </div>
-
-                <div className="info-container">
-                    <div className="research-interests">
-                        <h2><FontAwesomeIcon icon={faBriefcase} /> Technical Exp</h2>
-                        <ul>
-                            <li>Designed and Implemented: </li>
-                            <li>● Data analytics Dashboards</li>
-                            <li>● API Integrations</li>
-                            <li>● Data Analysis Pipelines</li>
-                            <li>● Web Applications</li>
-                        </ul>
+                    <div className="intro-text">
+                        {/* About Section */}
+                        <About />
                     </div>
-                    <div className="research-interests">
-                        <h2><FontAwesomeIcon icon={faBrain} /> Core Skills</h2>
-                        <ul>
-                            <li>Full-Stack Development</li>
-                            <li>Software Architecture</li>
-                            <li>Problem-Solving Mindset</li>
-                            <li>Data Engineering & Analytics</li>
-                            <li>Fast Learner & Proactive</li>
-                            <li>Team Collaboration</li>
-                            <li>Communication</li>
-                        </ul>
+                    <div className="invitation">
+                        <p>
+                            For updated information about my experience and education, please visit my{' '}
+                            <a href="https://www.linkedin.com/in/yourlinkedinprofile" target="_blank" rel="noopener noreferrer">
+                                LinkedIn profile
+                            </a>.
+                        </p>
                     </div>
-                    <div className="education">
-                        <h2><FontAwesomeIcon icon={faGraduationCap} /> Education</h2>
-                        <ul>
-                            <li>
-                                <i>PhD in Software Engineering, 2025</i>
-                                <div className="description">Delft University of Technology, NL</div>
-                            </li>
-                            <li>
-                                <i>MSc in Software Engineering, 2021</i>
-                                <div className="description">Sharif University of Technology, IR</div>
-                            </li>
-                            <li>
-                                <i>BSc in Software Engineering, 2017</i>
-                                <div className="description">Azad University South Tehran Branch, IR</div>
-                            </li>
-                        </ul>
-                    </div>
+
+                    {/*</div>*/}
+                {/* Projects Section */}
+                {/*<Projects />*/}
+
+                {/* Education Section */}
+                {/*<Education />*/}
+                {/*<div className="info-container">*/}
+                {/*    <div className="research-interests">*/}
+                {/*        <h2><FontAwesomeIcon icon={faBriefcase} /> Technical Exp</h2>*/}
+                {/*        <ul>*/}
+                {/*            <li>Designed and Implemented: </li>*/}
+                {/*            <li>● Data analytics Dashboards</li>*/}
+                {/*            <li>● API Integrations</li>*/}
+                {/*            <li>● Data Analysis Pipelines</li>*/}
+                {/*            <li>● Web Applications</li>*/}
+                {/*        </ul>*/}
+                {/*    </div>*/}
+                {/*    <div className="research-interests">*/}
+                {/*        <h2><FontAwesomeIcon icon={faBrain} /> Core Skills</h2>*/}
+                {/*        <ul>*/}
+                {/*            <li>Full-Stack Development</li>*/}
+                {/*            <li>Software Architecture</li>*/}
+                {/*            <li>Problem-Solving Mindset</li>*/}
+                {/*            <li>Data Engineering & Analytics</li>*/}
+                {/*            <li>Fast Learner & Proactive</li>*/}
+                {/*            <li>Team Collaboration</li>*/}
+                {/*            <li>Communication</li>*/}
+                {/*        </ul>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
+                    {/* Social Links */}
                 </div>
-                <div className="social-links">
-                    <a href="https://github.com/akhatami" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faGithub} />
-                    </a>
-                    <a href="https://www.linkedin.com/in/alikhatami/" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faLinkedin} />
-                    </a>
-                    <a href="https://scholar.google.com/citations?user=ax4ieSsAAAAJ&hl=en&oi=sra" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faGraduationCap} />
-                    </a>
-                </div>
-            </div>
-        </div>
+            </section>
+                    <SocialLinks />
+            {/*</div>*/}
         </>
     );
 };
