@@ -25,7 +25,7 @@ const HomePage = () => {
                     <div className="invitation">
                         <p>
                             For updated information about my experience and education, please visit my{' '}
-                            <a href="https://www.linkedin.com/in/yourlinkedinprofile" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.linkedin.com/in/alikhatami/" target="_blank" rel="noopener noreferrer">
                                 LinkedIn profile
                             </a>.
                         </p>
