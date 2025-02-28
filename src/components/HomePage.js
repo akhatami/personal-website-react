@@ -12,7 +12,7 @@ const HomePage = () => {
                 {/* Hero Section */}
                 <div className="content">
                     <div className="intro-image">
-                        <img src="avatar-personal.jpg" alt="Ali Khatami" className="profile-photo" />
+                        <img src="avatar-personal.jpeg" alt="Ali Khatami" className="profile-photo" />
                         <h1 className="name">Ali Khatami</h1>
                         <p className="tagline">PhD Candidate & Data-Driven Software Engineer
                             {/*<br />Delft University of Technology*/}
