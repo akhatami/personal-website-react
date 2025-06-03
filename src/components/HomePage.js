@@ -14,7 +14,7 @@ const HomePage = () => {
                     <div className="intro-image">
                         <img src="avatar-personal.jpeg" alt="Ali Khatami" className="profile-photo" />
                         <h1 className="name">Ali Khatami</h1>
-                        <p className="tagline">PhD Candidate & Data-Driven Software Engineer
+                        <p className="tagline">Data Engineer & PhD Candidate
                             {/*<br />Delft University of Technology*/}
                         </p>
                     </div>

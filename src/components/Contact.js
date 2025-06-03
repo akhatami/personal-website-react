@@ -14,7 +14,7 @@ const Contact = () => {
                     <FontAwesomeIcon icon={faEnvelope} /> Get in Touch
                 </h2>
                 <p>
-                    I'm open to new opportunities and collaborations. Whether you're looking to discuss a project, need assistance with software development, or want to connect professionally, feel free to reach out!
+                    Feel free to reach out!
                 </p>
                 <div className="contact-links">
                     <a href="mailto:sakhaatami@gmail.com" className="contact-link">
