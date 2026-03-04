@@ -1,28 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
-/* ── Page shell ── */
 .publications-page {
     min-height: 100vh;
     background-color: #000;
     color: #fff;
     font-family: 'Merriweather', serif;
     box-sizing: border-box;
-    /* Explicitly reset any inherited grid */
     display: block !important;
 }
 
-/* ── Layout wrapper — explicit block to prevent grid bleed ── */
 .publications-wrap {
     display: block !important;
     max-width: 760px;
     margin: 0 auto;
     padding: 4rem 2rem 5rem;
-    /* Reset anything from HomePage.css .content */
     grid-template-columns: unset !important;
 }
 
-/* ── Page heading ── */
 .publications-heading {
     display: block;
     font-family: 'Bebas Neue', sans-serif;
@@ -35,20 +30,19 @@
 .publications-subheading {
     display: block;
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: #555;
+    color: #777;
     margin: 0 0 3rem 0;
 }
 
-/* ── Single publication row — full width, stacked ── */
 .publication {
     display: grid !important;
-    grid-template-columns: 48px 1fr !important;
+    grid-template-columns: 52px 1fr !important;
     gap: 0 1.5rem;
     padding: 2rem 0;
-    border-bottom: 1px solid #111;
+    border-bottom: 1px solid #222;
     border-radius: 0;
     background: none;
     width: 100%;
@@ -60,28 +54,26 @@
     border-bottom: none;
 }
 
-/* Year column */
 .pub-year {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1rem;
-    color: #333;
+    color: #666;
     letter-spacing: 1px;
     padding-top: 4px;
     text-align: right;
     line-height: 1;
 }
 
-/* Body column */
 .pub-body {
     display: flex;
     flex-direction: column;
-    gap: 0.35rem;
+    gap: 0.4rem;
     min-width: 0;
 }
 
 .pub-title {
     font-family: 'Merriweather', serif;
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: 700;
     line-height: 1.55;
     margin: 0;
@@ -90,27 +82,26 @@
 
 .pub-authors {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.9rem;
-    color: #666;
+    font-size: 0.95rem;
+    color: #888;
     letter-spacing: 0.3px;
     margin: 0;
 }
 
 .pub-authors .own-name {
-    color: #bbb;
+    color: #ddd;
     font-weight: 700;
 }
 
 .pub-venue {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.85rem;
-    color: #444;
+    font-size: 0.9rem;
+    color: #666;
     font-style: italic;
     letter-spacing: 0.3px;
     margin: 0;
 }
 
-/* ── Links row ── */
 .publication-links {
     display: flex;
     flex-wrap: wrap;
@@ -121,13 +112,13 @@
 
 .pub-link {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    color: #555;
+    color: #888;
     text-decoration: none;
-    border: 1px solid #1e1e1e;
-    padding: 0.2rem 0.55rem;
+    border: 1px solid #333;
+    padding: 0.25rem 0.6rem;
     border-radius: 2px;
     transition: color 0.2s ease, border-color 0.2s ease;
     display: inline-flex;
@@ -137,21 +128,20 @@
 
 .pub-link:hover {
     color: #fff;
-    border-color: #555;
+    border-color: #888;
     text-decoration: none;
 }
 
-/* ── Summary toggle ── */
 .summary-toggle {
     background: none;
     border: none;
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    color: #383838;
+    color: #666;
     cursor: pointer;
-    padding: 0.2rem 0;
+    padding: 0.25rem 0;
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
@@ -160,24 +150,23 @@
 }
 
 .summary-toggle:hover { color: #fff; }
-.summary-toggle:disabled { opacity: 0.3; cursor: default; }
+.summary-toggle:disabled { opacity: 0.4; cursor: default; }
 
-/* ── Summary expanded ── */
 .summary-content {
     margin-top: 1.25rem;
     padding: 1.25rem 1.5rem;
-    background-color: #080808;
-    border: 1px solid #1a1a1a;
-    border-left: 2px solid #2a2a2a;
+    background-color: #0a0a0a;
+    border: 1px solid #222;
+    border-left: 2px solid #444;
     border-radius: 2px;
 }
 
 .summary-content h4 {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: #444;
+    color: #777;
     margin: 0 0 1rem 0;
     font-weight: 700;
 }
@@ -187,19 +176,19 @@
 
 .summary-text-section h5 {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #666;
+    color: #888;
     margin: 0 0 0.5rem 0;
     font-weight: 700;
 }
 
 .summary-text-section p,
 .summary-text-section li {
-    font-size: 0.82rem;
+    font-size: 0.88rem;
     line-height: 1.75;
-    color: #888;
+    color: #aaa;
     margin: 0 0 0.5rem 0;
     font-weight: 300;
 }
@@ -210,36 +199,31 @@
     margin: 0 0 0.5rem 0;
 }
 
-/* ── Social links footer ── */
 .publications-page .social-links {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
     padding: 2.5rem 0 0;
-    border-top: 1px solid #111;
+    border-top: 1px solid #222;
     margin-top: 1rem;
 }
 
 .publications-page .social-links a {
-    color: #333;
+    color: #666;
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.2s ease;
     border-bottom: none !important;
-    font-family: inherit;
-    font-size: 1rem;
 }
 
 .publications-page .social-links a:hover {
     color: #fff;
-    text-decoration: none;
 }
 
-/* ── Responsive ── */
 @media screen and (max-width: 600px) {
     .publications-wrap { padding: 2rem 1.25rem 3rem; }
     .publications-heading { font-size: 2rem; }
-    .publication { grid-template-columns: 36px 1fr !important; gap: 0 0.75rem; }
+    .publication { grid-template-columns: 40px 1fr !important; gap: 0 0.75rem; }
     .summary-toggle { margin-left: 0; margin-top: 0.25rem; }
 }

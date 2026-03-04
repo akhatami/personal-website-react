@@ -12,8 +12,8 @@ const Contact = () => {
             <Navigation />
             <section className="contact">
                 <div className="contact-inner">
-                    <p className="contact-label">Contact</p>
-                    <h1 className="contact-title">GET IN TOUCH</h1>
+                    <h1 className="contact-title">Contact</h1>
+                    {/*<h1 className="contact-title">GET IN TOUCH</h1>*/}
                     <p className="contact-desc">
                         Open to research collaborations, questions about my work,<br />
                         or just a conversation about software engineering.

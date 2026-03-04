@@ -20,16 +20,16 @@
 
 .contact-label {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: #555;
+    color: #777;
     margin: 0 0 0.75rem 0;
 }
 
 .contact-title {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 5rem;
+    font-size: 3rem;
     letter-spacing: 4px;
     line-height: 0.9;
     margin: 0 0 1.5rem 0;
@@ -37,14 +37,13 @@
 }
 
 .contact-desc {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     line-height: 1.8;
-    color: #666;
+    color: #aaa;
     font-weight: 300;
     margin: 0 0 2.5rem 0;
 }
 
-/* ── Contact method cards ── */
 .contact-methods {
     display: flex;
     flex-direction: column;
@@ -57,7 +56,7 @@
     align-items: center;
     gap: 1rem;
     padding: 1rem 1.25rem;
-    border: 1px solid #1a1a1a;
+    border: 1px solid #2a2a2a;
     border-radius: 4px;
     text-decoration: none;
     color: #fff;
@@ -66,48 +65,42 @@
 }
 
 .contact-method:hover {
-    border-color: #444;
+    border-color: #666;
     background-color: #111;
     color: #fff;
     text-decoration: none;
 }
 
 .contact-method svg {
-    color: #555;
+    color: #888;
     font-size: 1rem;
     flex-shrink: 0;
     width: 16px;
 }
 
-.contact-method.primary svg {
-    color: #888;
-}
-
 .method-label {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #555;
+    color: #777;
     width: 52px;
     flex-shrink: 0;
 }
 
 .method-value {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1rem;
+    font-size: 1.05rem;
     letter-spacing: 0.5px;
-    color: #ccc;
+    color: #ddd;
 }
 
-/* ── Divider ── */
 .contact-divider {
     height: 1px;
-    background-color: #111;
+    background-color: #222;
     margin-bottom: 1.5rem;
 }
 
-/* ── Also find me on ── */
 .contact-also {
     display: flex;
     align-items: center;
@@ -117,10 +110,10 @@
 
 .contact-also-label {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #444;
+    color: #666;
     flex-shrink: 0;
 }
 
@@ -131,10 +124,10 @@
 
 .contact-also-links a {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #555;
+    color: #888;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
@@ -150,16 +143,7 @@
 }
 
 @media screen and (max-width: 480px) {
-    .contact-title {
-        font-size: 3.5rem;
-    }
-
-    .contact-desc br {
-        display: none;
-    }
-
-    .contact-also {
-        flex-direction: column;
-        gap: 0.75rem;
-    }
+    .contact-title { font-size: 3.5rem; }
+    .contact-desc br { display: none; }
+    .contact-also { flex-direction: column; gap: 0.75rem; }
 }

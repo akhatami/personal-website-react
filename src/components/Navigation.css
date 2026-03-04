@@ -2,7 +2,7 @@
 
 .navigation {
     background-color: #000;
-    border-bottom: 1px solid #111;
+    border-bottom: 1px solid #222;
 }
 
 .navigation ul {
@@ -22,10 +22,10 @@
 .navigation ul li a:visited {
     display: inline-block;
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: #555;
+    color: #888;
     text-decoration: none;
     border-bottom: none;
     padding: 1rem 1.5rem;
@@ -39,13 +39,9 @@
 }
 
 @media screen and (max-width: 480px) {
-    .navigation ul {
-        gap: 0;
-    }
-
     .navigation ul li a {
         padding: 0.75rem 1rem;
-        font-size: 0.75rem;
+        font-size: 0.8rem;
         letter-spacing: 2px;
     }
 }

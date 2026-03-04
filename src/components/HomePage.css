@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Play:wght@400;700&display=swap');
 
-/* ── Reset bleeding global a style — scoped only to this page ── */
 .home-page a,
 .about a {
     color: #fff;
     text-decoration: none;
     font-family: inherit;
     font-size: inherit;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #666;
     transition: border-color 0.2s ease;
 }
 
@@ -19,9 +18,8 @@
     border-bottom-color: #fff;
 }
 
-/* ── Page: exactly one viewport, no scroll ── */
 .home-page {
-    height: calc(100vh - 45px); /* subtract nav height */
+    height: calc(100vh - 45px);
     max-height: calc(100vh - 45px);
     overflow: hidden;
     background-color: #000;
@@ -32,7 +30,6 @@
     flex-direction: column;
 }
 
-/* ── Main grid: fills remaining height ── */
 .content {
     display: grid;
     grid-template-columns: 240px 1fr;
@@ -47,7 +44,6 @@
     column-gap: 0;
 }
 
-/* ── Left: identity column ── */
 .intro-image {
     grid-column: 1;
     grid-row: 1 / 3;
@@ -55,7 +51,7 @@
     flex-direction: column;
     align-items: flex-start;
     padding-right: 2.5rem;
-    border-right: 1px solid #1a1a1a;
+    border-right: 1px solid #333;
     padding-top: 0.25rem;
     min-height: 0;
 }
@@ -77,16 +73,17 @@
     text-transform: uppercase;
     margin: 0 0 0.3rem 0;
     line-height: 1;
+    color: #fff;
 }
 
 .tagline {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     font-weight: 400;
-    color: #666;
+    color: #999;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    margin: 0 0 0 0;
+    margin: 0;
     line-height: 1.5;
 }
 
@@ -100,13 +97,12 @@
 
 .identity-meta-item {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.75rem;
-    color: #333;
+    font-size: 0.8rem;
+    color: #666;
     letter-spacing: 0.5px;
     text-transform: uppercase;
 }
 
-/* ── Right: bio ── */
 .intro-text {
     grid-column: 2;
     grid-row: 1;
@@ -115,21 +111,20 @@
     min-height: 0;
 }
 
-/* ── About ── */
 .about h2 {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: #444;
+    color: #777;
     margin: 0 0 1.25rem 0;
     font-weight: 700;
 }
 
 .bio p {
-    font-size: 0.88rem;
-    line-height: 1.8;
-    color: #bbb;
+    font-size: 0.95rem;
+    line-height: 1.85;
+    color: #ccc;
     margin-bottom: 1rem;
     font-weight: 300;
 }
@@ -138,29 +133,28 @@
     margin-bottom: 0;
 }
 
-/* ── Invitation / footer line ── */
 .invitation {
     grid-column: 2;
     grid-row: 2;
     padding-left: 2.5rem;
     padding-top: 1.25rem;
-    border-top: 1px solid #111;
+    border-top: 1px solid #222;
     margin-top: 1.25rem;
 }
 
 .invitation p {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.8rem;
-    color: #444;
+    font-size: 0.85rem;
+    color: #777;
     letter-spacing: 0.3px;
     margin: 0;
 }
 
 .invitation a {
     font-family: 'Barlow Condensed', sans-serif !important;
-    font-size: 0.8rem !important;
-    color: #666 !important;
-    border-bottom: 1px solid #333 !important;
+    font-size: 0.85rem !important;
+    color: #aaa !important;
+    border-bottom: 1px solid #666 !important;
 }
 
 .invitation a:hover {
@@ -168,18 +162,17 @@
     border-bottom-color: #fff !important;
 }
 
-/* ── Social links ── */
 .social-links {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
     padding: 1rem 0;
-    border-top: 1px solid #0d0d0d;
+    border-top: 1px solid #1a1a1a;
 }
 
 .social-links a {
-    color: #333;
+    color: #666;
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.2s ease;
@@ -193,7 +186,6 @@
     border-bottom: none !important;
 }
 
-/* ── Responsive: allow scroll on small screens ── */
 @media screen and (max-width: 768px) {
     .home-page {
         height: auto;
@@ -216,7 +208,7 @@
         padding-right: 0;
         padding-bottom: 1.5rem;
         border-right: none;
-        border-bottom: 1px solid #1a1a1a;
+        border-bottom: 1px solid #333;
         margin-bottom: 1.5rem;
     }
 
