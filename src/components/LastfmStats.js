@@ -23,21 +23,6 @@ const lfm = async (params) => {
     return response.data;
 };
 
-// Sequential fetcher — waits between each call to avoid rate limiting
-const fetchAll = async (calls) => {
-    const results = [];
-    for (const call of calls) {
-        try {
-            results.push(await call());
-        } catch (e) {
-            console.warn('Last.fm call failed, using empty fallback:', e.message);
-            results.push(null);
-        }
-        await sleep(250);
-    }
-    return results;
-};
-
 function getImg(item, size = 'extralarge') {
     const img = item?.image?.find(i => i.size === size) || item?.image?.find(i => i.size === 'large');
     const url = img?.['#text'];
