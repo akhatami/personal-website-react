@@ -1,275 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Play:wght@400;700&display=swap');
 
-/* Existing Styles */
-
-.home-page {
-    min-height: 90vh;
-    background-color: #000;
+/* ── Reset bleeding global a style — scoped only to this page ── */
+.home-page a,
+.about a {
     color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Merriweather', serif;
-    /*padding: 2rem 2rem 0;*/
-    box-sizing: border-box;
-    flex-direction: column; /* Ensure vertical stacking */
+    text-decoration: none;
+    font-family: inherit;
+    font-size: inherit;
+    border-bottom: 1px solid #333;
+    transition: border-color 0.2s ease;
 }
 
+.home-page a:hover,
+.about a:hover {
+    color: #fff;
+    text-decoration: none;
+    border-bottom-color: #fff;
+}
+
+/* ── Page: exactly one viewport, no scroll ── */
+.home-page {
+    height: calc(100vh - 45px); /* subtract nav height */
+    max-height: calc(100vh - 45px);
+    overflow: hidden;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Merriweather', serif;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ── Main grid: fills remaining height ── */
 .content {
-    text-align: left;
-    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: 1fr auto;
+    flex: 1;
+    min-height: 0;
+    max-width: 960px;
     width: 100%;
-    padding: 2rem 2rem;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    box-sizing: border-box;
+    column-gap: 0;
+}
+
+/* ── Left: identity column ── */
+.intro-image {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 2.5rem;
+    border-right: 1px solid #1a1a1a;
+    padding-top: 0.25rem;
+    min-height: 0;
+}
+
+.profile-photo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.25rem;
+    filter: grayscale(15%);
 }
 
 .name {
-    font-family: 'Merriweather', serif;
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    text-align: center;
+    margin: 0 0 0.3rem 0;
+    line-height: 1;
 }
 
 .tagline {
-    font-family: 'Merriweather', serif;
-    font-size: 1rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #666;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin: 0 0 0 0;
+    line-height: 1.5;
 }
 
-.bio {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
+.identity-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-top: auto;
+    padding-top: 1.5rem;
 }
 
+.identity-meta-item {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    color: #333;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* ── Right: bio ── */
+.intro-text {
+    grid-column: 2;
+    grid-row: 1;
+    padding-left: 2.5rem;
+    overflow: hidden;
+    min-height: 0;
+}
+
+/* ── About ── */
+.about h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #444;
+    margin: 0 0 1.25rem 0;
+    font-weight: 700;
+}
+
+.bio p {
+    font-size: 0.88rem;
+    line-height: 1.8;
+    color: #bbb;
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.bio p:last-child {
+    margin-bottom: 0;
+}
+
+/* ── Invitation / footer line ── */
+.invitation {
+    grid-column: 2;
+    grid-row: 2;
+    padding-left: 2.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid #111;
+    margin-top: 1.25rem;
+}
+
+.invitation p {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.8rem;
+    color: #444;
+    letter-spacing: 0.3px;
+    margin: 0;
+}
+
+.invitation a {
+    font-family: 'Barlow Condensed', sans-serif !important;
+    font-size: 0.8rem !important;
+    color: #666 !important;
+    border-bottom: 1px solid #333 !important;
+}
+
+.invitation a:hover {
+    color: #fff !important;
+    border-bottom-color: #fff !important;
+}
+
+/* ── Social links ── */
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
-    /*margin-bottom: 2rem;*/
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 0;
+    border-top: 1px solid #0d0d0d;
 }
 
 .social-links a {
-    color: #fff;
+    color: #333;
     text-decoration: none;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+    border-bottom: none !important;
+    display: flex;
+    align-items: center;
 }
 
 .social-links a:hover {
-    color: #ccc;
-    cursor: pointer;
-}
-
-.navigation {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-.nav-link {
-    font-family: 'Barlow Condensed', sans-serif;
     color: #fff;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding: 0.5rem 1.5rem;
-    border: 2px solid #fff;
-    border-radius: 4px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    border-bottom: none !important;
 }
 
-.home-page.dark {
-    background-color: #000;
-    color: #fff;
-}
-
-.home-page.less-dark {
-    background-color: #222;
-    color: #ccc;
-}
-
-a {
-    color: #ffffff;
-    text-decoration: none;
-    font-family: 'Courier New', monospace;
-    font-size: 1.2rem;
-}
-
-a:hover {
-    color: #ffffff;
-    text-decoration: line-through;
-}
-
-.info-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 2rem;
-}
-
-.research-interests,
-.education {
-    flex: 1;
-    padding: 1rem;
-}
-
-.research-interests h2,
-.education h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-}
-
-.research-interests h2 svg,
-.education h2 svg {
-    margin-right: 0.5rem;
-}
-
-.research-interests ul,
-.education ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.research-interests li,
-.education li {
-    margin-bottom: 0.5rem;
-}
-
-.education li i {
-    font-style: italic;
-}
-
+/* ── Responsive: allow scroll on small screens ── */
 @media screen and (max-width: 768px) {
-    .info-container {
-        flex-direction: column;
-    }
-}
-
-.education .description {
-    color: #cccccc;
-    font-size: smaller;
-}
-
-.intro-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-}
-
-.intro-text {
-    flex: 1;
-    padding-right: 2rem;
-}
-
-.intro-image {
-    flex: 1;
-    text-align: center;
-}
-
-.intro-image img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
-}
-
-.image-caption {
-    font-style: italic;
-}
-
-@media screen and (max-width: 600px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .intro-text {
-        padding-right: 0;
-        margin-bottom: 2rem;
+    .home-page {
+        height: auto;
+        max-height: none;
+        overflow: visible;
     }
 
     .content {
-        max-width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        padding: 2rem 1.5rem 2rem;
     }
 
-    .name {
-        font-size: 2.5rem;
+    .intro-image {
+        grid-column: 1;
+        grid-row: 1;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.25rem;
+        padding-right: 0;
+        padding-bottom: 1.5rem;
+        border-right: none;
+        border-bottom: 1px solid #1a1a1a;
+        margin-bottom: 1.5rem;
     }
 
-    .tagline {
-        font-size: 1.2rem;
+    .profile-photo {
+        width: 72px;
+        height: 72px;
+        margin-bottom: 0;
+        flex-shrink: 0;
     }
 
-    .bio {
-        font-size: 1rem;
+    .identity-meta { display: none; }
+
+    .intro-text {
+        grid-column: 1;
+        grid-row: 2;
+        padding-left: 0;
+        overflow: visible;
     }
 
-    .nav-link {
-        margin-bottom: 1rem;
-    }
-
-    .home-page {
-        padding: 0;
-    }
-
-    .tagline {
-        font-size: 0.9rem;
+    .invitation {
+        grid-column: 1;
+        grid-row: 3;
+        padding-left: 0;
     }
 }
-
-/* Minimal Styles for Projects Section */
-.projects {
-    width: 100%;
-    padding: 2rem 0;
-}
-
-.projects h2 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
-}
-
-.projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-.project-card {
-    background-color: #222;
-    border: 1px solid #444;
-    border-radius: 6px;
-    width: 280px;
-    padding: 1rem;
-    color: #ccc;
-}
-
-.project-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: #fff;
-}
-
-.project-links a {
-    margin-right: 0.5rem;
-    color: #1e90ff;
-    font-size: 0.9rem;
-    text-decoration: none;
-}
-
-.project-links a:hover {
-    text-decoration: underline;
-}
-

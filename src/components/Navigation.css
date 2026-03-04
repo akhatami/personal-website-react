@@ -1,34 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap');
+
 .navigation {
-    background-color: #1a1a1a;
-    padding: 1rem;
-    text-align: right;
+    background-color: #000;
+    border-bottom: 1px solid #111;
 }
 
 .navigation ul {
+    display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
+    justify-content: center;
+    gap: 0;
 }
 
-.navigation li {
+.navigation ul li {
+    display: block;
+}
+
+.navigation ul li a,
+.navigation ul li a:visited {
     display: inline-block;
-    margin-left: 1rem;
-}
-
-.navigation a {
-    color: #ffffff;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #555;
     text-decoration: none;
-    font-family: 'Courier New', monospace;
-    font-size: 1.2rem;
+    border-bottom: none;
+    padding: 1rem 1.5rem;
+    transition: color 0.2s ease;
 }
 
-.navigation a:hover {
-    color: #ffffff;
-    text-decoration: line-through;
+.navigation ul li a:hover {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: none;
 }
 
-@media screen and (max-width: 600px) {
-    .navigation {
-        padding: 0.3rem;
+@media screen and (max-width: 480px) {
+    .navigation ul {
+        gap: 0;
+    }
+
+    .navigation ul li a {
+        padding: 0.75rem 1rem;
+        font-size: 0.75rem;
+        letter-spacing: 2px;
     }
 }

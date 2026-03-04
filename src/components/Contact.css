@@ -1,43 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900&display=swap');
+
 .contact {
-    min-height: 90vh;
-    background-color: #000; /* Matches the home-page background */
+    min-height: calc(100vh - 45px);
+    background-color: #000;
     color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+
+.contact-inner {
+    max-width: 560px;
+    width: 100%;
+}
+
+.contact-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #555;
+    margin: 0 0 0.75rem 0;
+}
+
+.contact-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem;
+    letter-spacing: 4px;
+    line-height: 0.9;
+    margin: 0 0 1.5rem 0;
+    color: #fff;
+}
+
+.contact-desc {
+    font-size: 0.85rem;
+    line-height: 1.8;
+    color: #666;
+    font-weight: 300;
+    margin: 0 0 2.5rem 0;
+}
+
+/* ── Contact method cards ── */
+.contact-methods {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    box-sizing: border-box;
-    text-align: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
 }
 
-.contact h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+.contact-method {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-}
-
-.contact p {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-    max-width: 600px;
-}
-
-.contact-button {
-    padding: 0.75rem 1.5rem;
-    background-color: #1e90ff; /* Button background color */
-    color: #fff;
-    border: none;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid #1a1a1a;
     border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    color: #fff;
+    background-color: #0a0a0a;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
-.contact-button:hover {
-    background-color: #63b3ed; /* Button hover color */
+.contact-method:hover {
+    border-color: #444;
+    background-color: #111;
+    color: #fff;
+    text-decoration: none;
 }
 
+.contact-method svg {
+    color: #555;
+    font-size: 1rem;
+    flex-shrink: 0;
+    width: 16px;
+}
+
+.contact-method.primary svg {
+    color: #888;
+}
+
+.method-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #555;
+    width: 52px;
+    flex-shrink: 0;
+}
+
+.method-value {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    color: #ccc;
+}
+
+/* ── Divider ── */
+.contact-divider {
+    height: 1px;
+    background-color: #111;
+    margin-bottom: 1.5rem;
+}
+
+/* ── Also find me on ── */
+.contact-also {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.contact-also-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #444;
+    flex-shrink: 0;
+}
+
+.contact-also-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.contact-also-links a {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #555;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: color 0.2s ease;
+    border-bottom: none;
+}
+
+.contact-also-links a:hover {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+@media screen and (max-width: 480px) {
+    .contact-title {
+        font-size: 3.5rem;
+    }
+
+    .contact-desc br {
+        display: none;
+    }
+
+    .contact-also {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}

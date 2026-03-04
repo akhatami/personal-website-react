@@ -3,69 +3,45 @@ import './HomePage.css';
 import Navigation from "./Navigation";
 import About from "./About";
 import SocialLinks from "./SocialLinks";
-const HomePage = () => {
 
+const HomePage = () => {
     return (
         <>
             <Navigation />
             <section className="home-page">
-                {/* Hero Section */}
                 <div className="content">
+
+                    {/* Left: identity column */}
                     <div className="intro-image">
                         <img src="avatar-personal.jpeg" alt="Ali Khatami" className="profile-photo" />
                         <h1 className="name">Ali Khatami</h1>
-                        <p className="tagline">Data Engineer & PhD Candidate
-                            {/*<br />Delft University of Technology*/}
-                        </p>
+                        <p className="tagline">Data Engineer<br />PhD Candidate</p>
+                        <div className="identity-meta">
+                            <span className="identity-meta-item">TU Delft</span>
+                            <span className="identity-meta-item">Delft, NL</span>
+                            <span className="identity-meta-item">Software Engineering</span>
+                        </div>
                     </div>
+
+                    {/* Right: bio */}
                     <div className="intro-text">
-                        {/* About Section */}
                         <About />
                     </div>
+
+                    {/* Right: footer line */}
                     <div className="invitation">
                         <p>
-                            For updated information about my experience and education, please visit my{' '}
+                            For updated experience and education, visit my{' '}
                             <a href="https://www.linkedin.com/in/alikhatami/" target="_blank" rel="noopener noreferrer">
                                 LinkedIn profile
                             </a>.
                         </p>
                     </div>
 
-                    {/*</div>*/}
-                {/* Projects Section */}
-                {/*<Projects />*/}
-
-                {/* Education Section */}
-                {/*<Education />*/}
-                {/*<div className="info-container">*/}
-                {/*    <div className="research-interests">*/}
-                {/*        <h2><FontAwesomeIcon icon={faBriefcase} /> Technical Exp</h2>*/}
-                {/*        <ul>*/}
-                {/*            <li>Designed and Implemented: </li>*/}
-                {/*            <li>● Data analytics Dashboards</li>*/}
-                {/*            <li>● API Integrations</li>*/}
-                {/*            <li>● Data Analysis Pipelines</li>*/}
-                {/*            <li>● Web Applications</li>*/}
-                {/*        </ul>*/}
-                {/*    </div>*/}
-                {/*    <div className="research-interests">*/}
-                {/*        <h2><FontAwesomeIcon icon={faBrain} /> Core Skills</h2>*/}
-                {/*        <ul>*/}
-                {/*            <li>Full-Stack Development</li>*/}
-                {/*            <li>Software Architecture</li>*/}
-                {/*            <li>Problem-Solving Mindset</li>*/}
-                {/*            <li>Data Engineering & Analytics</li>*/}
-                {/*            <li>Fast Learner & Proactive</li>*/}
-                {/*            <li>Team Collaboration</li>*/}
-                {/*            <li>Communication</li>*/}
-                {/*        </ul>*/}
-                {/*    </div>*/}
-                {/*</div>*/}
-                    {/* Social Links */}
                 </div>
+                {/* Social links inside the page so it stays in viewport */}
+                <SocialLinks />
             </section>
-                    <SocialLinks />
-            {/*</div>*/}
         </>
     );
 };

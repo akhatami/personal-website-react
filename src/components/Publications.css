@@ -1,176 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+/* ── Page shell ── */
 .publications-page {
-    min-height: 90vh;
+    min-height: 100vh;
     background-color: #000;
     color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Merriweather', sans-serif;
-    padding: 2rem;
+    font-family: 'Merriweather', serif;
     box-sizing: border-box;
+    /* Explicitly reset any inherited grid */
+    display: block !important;
 }
 
-.publications-content {
-    max-width: 800px;
-    width: 100%;
-    padding: 2rem;
+/* ── Layout wrapper — explicit block to prevent grid bleed ── */
+.publications-wrap {
+    display: block !important;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 4rem 2rem 5rem;
+    /* Reset anything from HomePage.css .content */
+    grid-template-columns: unset !important;
 }
 
-.publication {
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    background-color: #1a1a1a;
-    border-radius: 4px;
+/* ── Page heading ── */
+.publications-heading {
+    display: block;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 4px;
+    margin: 0 0 0.4rem 0;
+    line-height: 1;
 }
 
-.publication h3 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
-
-.publication p {
-    margin-bottom: 0.5rem;
+.publications-subheading {
+    display: block;
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: 0.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #555;
+    margin: 0 0 3rem 0;
 }
 
-a:hover {
-    color: #ffffff;
-    text-decoration: line-through;
-    cursor: pointer;
+/* ── Single publication row — full width, stacked ── */
+.publication {
+    display: grid !important;
+    grid-template-columns: 48px 1fr !important;
+    gap: 0 1.5rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid #111;
+    border-radius: 0;
+    background: none;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 0;
 }
 
-.publications,
-.contact-page {
+.publication:last-of-type {
+    border-bottom: none;
+}
+
+/* Year column */
+.pub-year {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    letter-spacing: 1px;
+    padding-top: 4px;
+    text-align: right;
+    line-height: 1;
+}
+
+/* Body column */
+.pub-body {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
+    gap: 0.35rem;
+    min-width: 0;
 }
 
-.publications h2,
-.contact-content h2 {
-    text-align: center;
+.pub-title {
+    font-family: 'Merriweather', serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.55;
+    margin: 0;
+    color: #fff;
 }
 
-.publications .publication,
-.contact-content {
-    max-width: 900px;
-    width: 100%;
+.pub-authors {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.9rem;
+    color: #666;
+    letter-spacing: 0.3px;
+    margin: 0;
 }
 
-.publication a {
-    font-size: 0.8rem;
-    word-wrap: break-word;
+.pub-authors .own-name {
+    color: #bbb;
+    font-weight: 700;
 }
 
-@media screen and (max-width: 600px) {
-    .publications-page {
-        padding: 0;
-    }
-    .publication h3 {
-        font-size: 1rem;
-    }
+.pub-venue {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.85rem;
+    color: #444;
+    font-style: italic;
+    letter-spacing: 0.3px;
+    margin: 0;
 }
 
-.publications-page {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-}
-
-.publication {
-    margin-bottom: 30px;
-}
-
-.publication h3 {
-    margin-bottom: 10px;
-}
-
-.publication p {
-    margin: 5px 0;
-}
-
+/* ── Links row ── */
 .publication-links {
-    margin-top: 10px;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+    align-items: center;
 }
 
-.publication-links a {
-    margin-right: 15px;
-    color: #ffffff;
+.pub-link {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #555;
+    text-decoration: none;
+    border: 1px solid #1e1e1e;
+    padding: 0.2rem 0.55rem;
+    border-radius: 2px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
 }
 
-
-.summary-section {
-    margin-top: 15px;
-    text-align: center;
+.pub-link:hover {
+    color: #fff;
+    border-color: #555;
+    text-decoration: none;
 }
 
-.summary-text-section {
-    margin-top: 15px;
-    text-align: left;
-}
-
+/* ── Summary toggle ── */
 .summary-toggle {
     background: none;
     border: none;
-    color: #ffffff;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #383838;
     cursor: pointer;
-    transition: background-color 0.6s ease;
-    font-family: 'Courier New', monospace;
-    font-size: 0.9em;
+    padding: 0.2rem 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: color 0.2s;
+    margin-left: auto;
 }
 
-.summary-toggle:hover {
-    text-decoration: line-through;
-}
+.summary-toggle:hover { color: #fff; }
+.summary-toggle:disabled { opacity: 0.3; cursor: default; }
 
+/* ── Summary expanded ── */
 .summary-content {
-    margin-top: 15px;
-    padding: 15px;
-    background-color: #1a1a1a;
-    border-radius: 4px;
-    border: 3px solid #333;
-    text-align: left;
+    margin-top: 1.25rem;
+    padding: 1.25rem 1.5rem;
+    background-color: #080808;
+    border: 1px solid #1a1a1a;
+    border-left: 2px solid #2a2a2a;
+    border-radius: 2px;
 }
 
 .summary-content h4 {
-    margin-top: 0;
-    margin-bottom: 15px;
-    color: #ffffff;
-    font-size: 1.1em;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #444;
+    margin: 0 0 1rem 0;
+    font-weight: 700;
 }
 
-.summary-content .summary-section {
-    margin-bottom: 15px;
+.summary-text-section { margin-bottom: 1rem; }
+.summary-text-section:last-child { margin-bottom: 0; }
+
+.summary-text-section h5 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #666;
+    margin: 0 0 0.5rem 0;
+    font-weight: 700;
 }
 
-.summary-content h5 {
-    margin-top: 0;
-    margin-bottom: 8px;
-    color: #ffffff;
-    font-size: 1em;
-}
-
-.summary-content p {
-    margin: 0;
-    line-height: 1.5;
-    color: #ffffff;
-    font-size: 0.9rem;
+.summary-text-section p,
+.summary-text-section li {
+    font-size: 0.82rem;
+    line-height: 1.75;
+    color: #888;
+    margin: 0 0 0.5rem 0;
+    font-weight: 300;
 }
 
 .summary-text-section ol,
-.summary-text-section ul
-{
-    font-size: 0.9rem;
-    padding-left: 15px;
+.summary-text-section ul {
+    padding-left: 1.25rem;
+    margin: 0 0 0.5rem 0;
 }
 
-.summary-text-section p {
-    font-size: 0.9rem;
+/* ── Social links footer ── */
+.publications-page .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2.5rem 0 0;
+    border-top: 1px solid #111;
+    margin-top: 1rem;
 }
 
-.summary-toggle .fa-spinner {
-    margin-right: 5px;
+.publications-page .social-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+    border-bottom: none !important;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.publications-page .social-links a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ── Responsive ── */
+@media screen and (max-width: 600px) {
+    .publications-wrap { padding: 2rem 1.25rem 3rem; }
+    .publications-heading { font-size: 2rem; }
+    .publication { grid-template-columns: 36px 1fr !important; gap: 0 0.75rem; }
+    .summary-toggle { margin-left: 0; margin-top: 0.25rem; }
 }
