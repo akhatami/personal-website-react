@@ -6,12 +6,14 @@ import LastfmStats from './components/LastfmStats';
 import Publications from "./components/Publications";
 import Contact from "./components/Contact";
 import Interests from "./components/Interests";
+import RunningStats from "./components/RunningStats";
 const App = () => {
     return (
         <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<HomePage />} />
                 <Route path="/lastfm-stats" element={<LastfmStats />} />
+                <Route path="/run-stats" element={<RunningStats />} />
                 <Route path="/publications" element={<Publications />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/interests" element={<Interests />} />
