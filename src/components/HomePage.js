@@ -31,7 +31,7 @@ const HomePage = () => {
                     {/* Right: footer line */}
                     <div className="invitation">
                         <p>
-                            For updated experience and education, visit my{' '}
+                            For my full CV and work history, see my{' '}
                             <a href="https://www.linkedin.com/in/alikhatami/" target="_blank" rel="noopener noreferrer">
                                 LinkedIn profile
                             </a>.

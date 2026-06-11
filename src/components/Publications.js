@@ -11,6 +11,24 @@ import {
 
 const publications = [
     {
+        id: 6,
+        title: 'Beyond the YAML File: Understanding Real-World GitHub Actions Workflow Adoption',
+        authors: ['Ali Khatami', 'Carolin Brandt', 'Andy Zaidman'],
+        venue: 'International Conference on Evaluation and Assessment in Software Engineering (EASE)',
+        year: 2026,
+        prePrint: 'https://arxiv.org/abs/2604.17662',
+        summaryFile: '/summaries/beyond-yaml-file.md',
+    },
+    {
+        id: 7,
+        title: 'The Qualitative Factor in Software Testing: A Systematic Mapping Study of Qualitative Methods',
+        authors: ['Baris Ardic', 'Carolin Brandt', 'Ali Khatami', 'Mark Swillus', 'Andy Zaidman'],
+        venue: 'Journal of Systems and Software',
+        year: 2025,
+        doi: 'https://doi.org/10.1016/j.jss.2025.112447',
+        summaryFile: '/summaries/qualitative-software-testing.md',
+    },
+    {
         id: 1,
         title: 'Software Quality Assurance Analytics: Enabling Software Engineers to Reflect on QA Practices',
         authors: ['Ali Khatami', 'Carolin Brandt', 'Andy Zaidman'],

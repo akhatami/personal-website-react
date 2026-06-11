@@ -5,7 +5,7 @@ const About = () => (
         <h2>About Me</h2>
         <div className="bio">
             <p>
-                Hi, I'm Ali! I’m a Data Engineer and Researcher at {' '}
+                Hi, I'm Ali! I'm a Data Engineer and Researcher at {' '}
                 <a href="https://www.tudelft.nl/" target="_blank" rel="noopener noreferrer">TU Delft's</a>{' '}
                 <a href="https://www.tudelft.nl/bk/onderzoek/bk-labs/data-refinery-lab"
                    target="_blank" rel="noopener noreferrer">Data Refinery Lab</a>{' '}
@@ -18,11 +18,12 @@ const About = () => (
                 developing data pipelines and analytics tools to support research on the built environment.
             </p>
             <p>
-                In parallel, I’m completing my PhD in Software Engineering at TU Delft under the supervision of
-                Prof. <a href="https://azaidman.github.io/" target="_blank" rel="noopener noreferrer">Andy Zaidman</a>. My research lies at the intersection of software analytics and software quality
-                assurance—leveraging data-driven insights
-                to help software engineers build more robust and maintainable software systems. Prior to my PhD, I earned my MSc
-                in Software Engineering at Sharif University of Technology.
+                In parallel, I'm completing my PhD in Software Engineering at TU Delft under the supervision of
+                Prof. <a href="https://azaidman.github.io/" target="_blank" rel="noopener noreferrer">Andy Zaidman</a>, and will soon be defending my thesis:{' '}
+                <em>Understanding Software Quality Assurance in Open-Source Communities: Awareness, Adoption, and Tool Utilization</em>.
+                My research investigates how open-source developers adopt, understand, and configure SQA practices—such as
+                CI, automated testing, and code review—on GitHub, uncovering key gaps between awareness, configuration, and actual usage.
+                Prior to my PhD, I earned my MSc in Software Engineering at Sharif University of Technology.
             </p>
             <p>
                 Interested in my research or publications?{' '}
