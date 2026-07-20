@@ -36,7 +36,7 @@
     grid-template-rows: 1fr auto;
     flex: 1;
     min-height: 0;
-    max-width: 960px;
+    max-width: 1120px;
     width: 100%;
     margin: 0 auto;
     padding: 3rem 2rem;
@@ -109,6 +109,27 @@
     padding-left: 2.5rem;
     overflow-y: auto;
     min-height: 0;
+    /* subtle, mostly-hidden scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: #333 transparent;
+}
+
+.intro-text::-webkit-scrollbar {
+    width: 6px;
+}
+
+.intro-text::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.intro-text::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+}
+
+.intro-text:hover::-webkit-scrollbar-thumb {
+    background-color: #333;
 }
 
 .about h2 {
