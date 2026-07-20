@@ -107,7 +107,7 @@
     grid-column: 2;
     grid-row: 1;
     padding-left: 2.5rem;
-    overflow: hidden;
+    overflow-y: auto;
     min-height: 0;
 }
 
