@@ -7,6 +7,7 @@ import Publications from "./components/Publications";
 import Contact from "./components/Contact";
 import Interests from "./components/Interests";
 import RunningStats from "./components/RunningStats";
+import Defense from "./components/Defense";
 const App = () => {
     return (
         <Routes>
@@ -17,6 +18,7 @@ const App = () => {
                 <Route path="/publications" element={<Publications />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/interests" element={<Interests />} />
+                <Route path="/defense" element={<Defense />} />
         </Routes>
     );
 };

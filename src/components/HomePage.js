@@ -2,6 +2,7 @@ import React from 'react';
 import './HomePage.css';
 import Navigation from "./Navigation";
 import About from "./About";
+import { Link } from 'react-router-dom';
 import SocialLinks from "./SocialLinks";
 
 const HomePage = () => {
@@ -22,6 +23,15 @@ const HomePage = () => {
                             <span className="identity-meta-item">Software Engineering</span>
                         </div>
                     </div>
+
+                    {/* Right: defense announcement */}
+                    <Link to="/defense" className="defense-banner">
+                        <span className="defense-banner-label">PhD Defense</span>
+                        <span className="defense-banner-text">
+                            23 October 2026, 12:30 — Aula, TU Delft. You are invited.
+                        </span>
+                        <span className="defense-banner-cta">RSVP →</span>
+                    </Link>
 
                     {/* Right: bio */}
                     <div className="intro-text">

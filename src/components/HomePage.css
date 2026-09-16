@@ -33,7 +33,7 @@
 .content {
     display: grid;
     grid-template-columns: 240px 1fr;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: auto 1fr auto;
     flex: 1;
     min-height: 0;
     max-width: 1120px;
@@ -46,7 +46,7 @@
 
 .intro-image {
     grid-column: 1;
-    grid-row: 1 / 3;
+    grid-row: 1 / 4;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -105,7 +105,7 @@
 
 .intro-text {
     grid-column: 2;
-    grid-row: 1;
+    grid-row: 2;
     padding-left: 2.5rem;
     overflow-y: auto;
     min-height: 0;
@@ -154,9 +154,64 @@
     margin-bottom: 0;
 }
 
+.defense-banner {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: start;
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 0 0 1.5rem 2.5rem;
+    padding: 0.85rem 1.1rem;
+    border: 1px solid #2a2a2a;
+    border-radius: 4px;
+    background-color: #0a0a0a;
+    text-decoration: none !important;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.defense-banner:hover {
+    border-color: #666;
+    background-color: #111;
+    text-decoration: none;
+}
+
+.defense-banner-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #000;
+    background-color: #fff;
+    padding: 0.15rem 0.5rem;
+    border-radius: 2px;
+}
+
+.defense-banner-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    color: #ccc;
+    flex: 1 1 auto;
+}
+
+.defense-banner-cta {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #888;
+    white-space: nowrap;
+}
+
+.defense-banner:hover .defense-banner-cta {
+    color: #fff;
+}
+
 .invitation {
     grid-column: 2;
-    grid-row: 2;
+    grid-row: 3;
     padding-left: 2.5rem;
     padding-top: 1.25rem;
     border-top: 1px solid #222;
@@ -216,7 +271,7 @@
 
     .content {
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
+        grid-template-rows: auto auto auto auto;
         padding: 2rem 1.5rem 2rem;
     }
 
@@ -242,16 +297,22 @@
 
     .identity-meta { display: none; }
 
-    .intro-text {
+    .defense-banner {
         grid-column: 1;
         grid-row: 2;
+        margin-left: 0;
+    }
+
+    .intro-text {
+        grid-column: 1;
+        grid-row: 3;
         padding-left: 0;
         overflow: visible;
     }
 
     .invitation {
         grid-column: 1;
-        grid-row: 3;
+        grid-row: 4;
         padding-left: 0;
     }
 }
