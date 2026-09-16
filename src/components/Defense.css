@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900&display=swap');
+
+.defense {
+    min-height: calc(100vh - 45px);
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 3.5rem 2rem 4rem;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+
+.defense-inner {
+    max-width: 620px;
+    width: 100%;
+}
+
+.defense-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #777;
+    margin: 0 0 0.75rem 0;
+}
+
+.defense-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 4px;
+    line-height: 0.9;
+    margin: 0 0 1.5rem 0;
+    color: #fff;
+}
+
+.defense-desc {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #aaa;
+    font-weight: 300;
+    margin: 0 0 2.25rem 0;
+}
+
+/* Thesis block */
+.defense-thesis {
+    border-left: 2px solid #2a2a2a;
+    padding: 0.25rem 0 0.25rem 1.25rem;
+    margin-bottom: 2.25rem;
+}
+
+.defense-thesis-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #777;
+}
+
+.defense-thesis-title {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-style: italic;
+    color: #e8e8e8;
+    margin: 0.5rem 0 0.6rem 0;
+}
+
+.defense-thesis-meta {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    color: #888;
+    margin: 0;
+}
+
+.defense-thesis-meta a {
+    color: #bbb;
+    text-decoration: none;
+    border-bottom: 1px solid #555;
+}
+
+.defense-thesis-meta a:hover {
+    color: #fff;
+    border-bottom-color: #fff;
+    text-decoration: none;
+}
+
+/* Detail rows */
+.defense-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.75rem;
+}
+
+.defense-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid #2a2a2a;
+    border-radius: 4px;
+    background-color: #0a0a0a;
+}
+
+.defense-detail svg {
+    color: #888;
+    font-size: 1rem;
+    flex-shrink: 0;
+    width: 16px;
+    margin-top: 0.2rem;
+}
+
+.detail-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #777;
+    width: 58px;
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+}
+
+.detail-value {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
+    color: #ddd;
+    line-height: 1.5;
+}
+
+.detail-value-sub {
+    display: block;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.defense-note {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #999;
+    font-weight: 300;
+    border-left: 2px solid #4a3a1a;
+    padding-left: 1.25rem;
+    margin: 0 0 2rem 0;
+}
+
+/* Actions */
+.defense-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+}
+
+.defense-action {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #bbb;
+    background-color: transparent;
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 0.7rem 1.25rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+.defense-action:hover {
+    border-color: #777;
+    color: #fff;
+    background-color: #111;
+    text-decoration: none;
+}
+
+.defense-action.primary {
+    border-color: #666;
+    color: #fff;
+}
+
+.defense-action.primary:hover {
+    background-color: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+.defense-divider {
+    height: 1px;
+    background-color: #222;
+    margin-bottom: 2.5rem;
+}
+
+/* RSVP */
+.rsvp-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.9rem;
+    letter-spacing: 4px;
+    margin: 0 0 0.6rem 0;
+    color: #fff;
+}
+
+.rsvp-desc {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #999;
+    font-weight: 300;
+    margin: 0 0 1.75rem 0;
+}
+
+.rsvp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.rsvp-hp {
+    display: none;
+}
+
+.rsvp-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rsvp-field-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #777;
+    padding: 0;
+}
+
+.rsvp-field-label em {
+    font-style: normal;
+    color: #555;
+    letter-spacing: 1px;
+}
+
+.rsvp-field input[type="text"],
+.rsvp-field input[type="email"],
+.rsvp-field select,
+.rsvp-field textarea {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
+    line-height: 1.25;
+    letter-spacing: 0.5px;
+    color: #eee;
+    background-color: #0a0a0a;
+    border: 1px solid #2a2a2a;
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+/* Native select chrome renders ~2px taller than the text inputs; strip it and
+   draw the chevron ourselves so every control is the same height. */
+.rsvp-field select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-right: 2.5rem;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='none' stroke='%23888' stroke-width='1.5' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    cursor: pointer;
+}
+
+.rsvp-field textarea {
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.rsvp-field input::placeholder,
+.rsvp-field textarea::placeholder {
+    color: #555;
+}
+
+.rsvp-field input:focus,
+.rsvp-field select:focus,
+.rsvp-field textarea:focus {
+    outline: none;
+    border-color: #777;
+}
+
+/* A <legend> is not a flex item in Chrome, so .rsvp-field's gap does not
+   apply to it. Reproduce that spacing explicitly. */
+.rsvp-choice legend {
+    margin-bottom: 0.5rem;
+}
+
+.rsvp-options {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.rsvp-option {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
+    line-height: 1.25;
+    letter-spacing: 0.5px;
+    color: #aaa;
+    background-color: #0a0a0a;
+    border: 1px solid #2a2a2a;
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.rsvp-option:hover {
+    border-color: #555;
+    color: #ddd;
+}
+
+.rsvp-option.selected {
+    border-color: #fff;
+    color: #fff;
+}
+
+.rsvp-option input[type="radio"] {
+    accent-color: #fff;
+    margin: 0;
+}
+
+.rsvp-submit {
+    align-self: flex-start;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 0.75rem 2rem;
+    line-height: 1.25;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.rsvp-submit:hover {
+    opacity: 0.85;
+}
+
+.rsvp-submit:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.rsvp-error {
+    font-size: 0.85rem;
+    color: #c98b8b;
+    margin: 0;
+}
+
+.rsvp-error a {
+    color: #ddd;
+}
+
+.rsvp-thanks {
+    border: 1px solid #2a2a2a;
+    border-radius: 4px;
+    background-color: #0a0a0a;
+    padding: 1.5rem 1.5rem;
+}
+
+.rsvp-thanks-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    color: #fff;
+    margin: 0 0 0.5rem 0;
+}
+
+.rsvp-thanks p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #aaa;
+    font-weight: 300;
+    margin: 0;
+}
+
+.defense-footer {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    color: #777;
+    margin: 0;
+}
+
+.defense-footer a {
+    color: #bbb;
+    text-decoration: none;
+    border-bottom: 1px solid #555;
+}
+
+.defense-footer a:hover {
+    color: #fff;
+    border-bottom-color: #fff;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 480px) {
+    .defense { padding: 2.5rem 1.25rem 3rem; }
+    .defense-title { font-size: 2.6rem; }
+    .defense-detail { flex-wrap: wrap; }
+    .defense-actions .defense-action { flex: 1 1 auto; text-align: center; }
+    .rsvp-options { flex-direction: column; }
+    .rsvp-submit { align-self: stretch; text-align: center; }
+}

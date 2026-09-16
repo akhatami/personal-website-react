@@ -29,6 +29,22 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
+    <!--
+      Static stub of the PhD defense RSVP form. Netlify parses the built HTML at
+      deploy time to register forms, so the React form alone is not enough.
+      Hidden from users; the real form lives in src/components/Defense.js.
+    -->
+    <form name="defense-rsvp" netlify-honeypot="bot-field" data-netlify="true" hidden>
+      <input type="hidden" name="form-name" value="defense-rsvp" />
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="radio" name="attending" value="yes" />
+      <input type="radio" name="attending" value="no" />
+      <input type="text" name="guests" />
+      <textarea name="message"></textarea>
+      <input name="bot-field" />
+    </form>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
