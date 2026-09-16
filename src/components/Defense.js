@@ -6,7 +6,7 @@ import { faCalendarDays, faClock, faLocationDot, faGlassCheers } from '@fortawes
 
 const GOOGLE_CALENDAR_URL =
     'https://calendar.google.com/calendar/render?action=TEMPLATE' +
-    '&text=' + encodeURIComponent('PhD Defense — Ali Khatami') +
+    '&text=' + encodeURIComponent("Ali's PhD Defense") +
     '&dates=20261023T103000Z/20261023T120000Z' +
     '&details=' + encodeURIComponent(
         'PhD defense of Ali Khatami at TU Delft. Please be seated before 12:30 — the doors close once the ceremony begins. Reception afterwards at the Aula.'
@@ -24,7 +24,7 @@ const ICS = [
     'DTSTAMP:20260916T000000Z',
     'DTSTART:20261023T103000Z',
     'DTEND:20261023T120000Z',
-    'SUMMARY:PhD Defense — Ali Khatami',
+    "SUMMARY:Ali's PhD Defense",
     'LOCATION:Aula Congress Centre\\, Senaatszaal\\, Mekelweg 5\\, 2628 CC Delft\\, The Netherlands',
     'DESCRIPTION:PhD defense of Ali Khatami at TU Delft. Please be seated before 12:30 — the doors close once the ceremony begins. Reception afterwards at the Aula.',
     'END:VEVENT',
@@ -86,7 +86,7 @@ const Defense = () => {
             <section className="defense">
                 <div className="defense-inner">
                     <p className="defense-label">You are invited to</p>
-                    <h1 className="defense-title">My PhD Defense</h1>
+                    <h1 className="defense-title">Ali's PhD Defense</h1>
 
                     <p className="defense-desc">
                         I will publicly defend my doctoral thesis at Delft University of Technology.
