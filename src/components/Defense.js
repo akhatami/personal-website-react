@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import Navigation from './Navigation';
 import './Defense.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -31,11 +31,6 @@ const ICS = [
     'END:VCALENDAR'
 ].join('\r\n');
 
-// Google reCAPTCHA v2 site key. Public by design (the secret lives only in
-// Netlify's SITE_RECAPTCHA_SECRET env var). When unset, the form renders and
-// submits without a captcha rather than breaking.
-const RECAPTCHA_SITE_KEY = process.env.REACT_APP_SITE_RECAPTCHA_KEY || '';
-
 const encode = (data) =>
     Object.keys(data)
         .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
@@ -43,40 +38,7 @@ const encode = (data) =>
 
 const Defense = () => {
     const [form, setForm] = useState({ name: '', email: '', attending: 'yes', guests: '0', message: '' });
-    const [status, setStatus] = useState('idle'); // idle | sending | sent | error | captcha
-    const captchaRef = useRef(null);
-    const widgetId = useRef(null);
-
-    // Netlify's own reCAPTCHA is injected into the HTML at deploy time, which
-    // never reaches a form React renders at runtime. So render Google's widget
-    // ourselves and pass the token along with the submission.
-    useEffect(() => {
-        if (!RECAPTCHA_SITE_KEY || status === 'sent') return;
-
-        const renderWidget = () => {
-            if (!captchaRef.current || widgetId.current !== null) return;
-            if (!window.grecaptcha || !window.grecaptcha.render) return;
-            widgetId.current = window.grecaptcha.render(captchaRef.current, {
-                sitekey: RECAPTCHA_SITE_KEY,
-                theme: 'dark'
-            });
-        };
-
-        if (window.grecaptcha && window.grecaptcha.render) {
-            renderWidget();
-            return;
-        }
-
-        window.onRecaptchaLoad = renderWidget;
-        if (!document.querySelector('script[data-recaptcha]')) {
-            const script = document.createElement('script');
-            script.src = 'https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit';
-            script.async = true;
-            script.defer = true;
-            script.setAttribute('data-recaptcha', 'true');
-            document.head.appendChild(script);
-        }
-    }, [status]);
+    const [status, setStatus] = useState('idle'); // idle | sending | sent | error
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -86,16 +48,6 @@ const Defense = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!form.name.trim()) return;
-
-        let captchaToken = '';
-        if (RECAPTCHA_SITE_KEY) {
-            captchaToken = window.grecaptcha ? window.grecaptcha.getResponse(widgetId.current) : '';
-            if (!captchaToken) {
-                setStatus('captcha');
-                return;
-            }
-        }
-
         setStatus('sending');
 
         // Netlify Forms only exists on a deployed Netlify site; POST / is a 404
@@ -107,22 +59,13 @@ const Defense = () => {
             return;
         }
 
-        const payload = { 'form-name': 'defense-rsvp', ...form };
-        if (captchaToken) payload['g-recaptcha-response'] = captchaToken;
-
         fetch('/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: encode(payload)
+            body: encode({ 'form-name': 'defense-rsvp', ...form })
         })
-            .then((res) => {
-                setStatus(res.ok ? 'sent' : 'error');
-                if (!res.ok && window.grecaptcha) window.grecaptcha.reset(widgetId.current);
-            })
-            .catch(() => {
-                setStatus('error');
-                if (window.grecaptcha) window.grecaptcha.reset(widgetId.current);
-            });
+            .then((res) => setStatus(res.ok ? 'sent' : 'error'))
+            .catch(() => setStatus('error'));
     };
 
     const downloadIcs = () => {
@@ -238,7 +181,6 @@ const Defense = () => {
                                 name="defense-rsvp"
                                 method="POST"
                                 data-netlify="true"
-                                data-netlify-recaptcha="true"
                                 netlify-honeypot="bot-field"
                                 onSubmit={handleSubmit}
                                 className="rsvp-form"
@@ -323,19 +265,9 @@ const Defense = () => {
                                     />
                                 </label>
 
-                                {RECAPTCHA_SITE_KEY && (
-                                    <div className="rsvp-captcha" ref={captchaRef} />
-                                )}
-
                                 <button type="submit" className="rsvp-submit" disabled={status === 'sending'}>
                                     {status === 'sending' ? 'Sending…' : 'Send RSVP'}
                                 </button>
-
-                                {status === 'captcha' && (
-                                    <p className="rsvp-error">
-                                        Please confirm you are not a robot before sending.
-                                    </p>
-                                )}
 
                                 {status === 'error' && (
                                     <p className="rsvp-error">
