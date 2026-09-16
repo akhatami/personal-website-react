@@ -36,6 +36,9 @@
       Hidden from users; the real form lives in src/components/Defense.js.
     -->
     <form name="defense-rsvp" netlify-honeypot="bot-field" data-netlify="true" hidden>
+      <!-- Add data-netlify-recaptcha="true" above once SITE_RECAPTCHA_KEY and
+           SITE_RECAPTCHA_SECRET are set in Netlify. Adding it before the keys
+           exist makes Netlify reject every submission as missing a captcha. -->
       <input type="hidden" name="form-name" value="defense-rsvp" />
       <input type="text" name="name" />
       <input type="email" name="email" />
