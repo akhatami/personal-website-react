@@ -293,6 +293,12 @@
     border-color: #777;
 }
 
+/* A <legend> is not a flex item in Chrome, so .rsvp-field's gap does not
+   apply to it. Reproduce that spacing explicitly. */
+.rsvp-choice legend {
+    margin-bottom: 0.5rem;
+}
+
 .rsvp-options {
     display: flex;
     gap: 0.75rem;
