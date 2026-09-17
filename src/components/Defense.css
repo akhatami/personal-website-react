@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900&display=swap');
 
+:root {
+    /* Pulled from the gold summit of the thesis cover. */
+    --defense-gold: #e5c181;
+    --defense-gold-dim: #8a7248;
+}
+
 .defense {
     min-height: calc(100vh - 45px);
     background-color: #000;
     color: #fff;
     display: flex;
-    justify-content: center;
-    padding: 3.5rem 2rem 4rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 4rem;
     box-sizing: border-box;
     font-family: 'Merriweather', serif;
 }
@@ -15,6 +22,83 @@
 .defense-inner {
     max-width: 620px;
     width: 100%;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+
+/* ---- Hero: the thesis cover, bled into the page ---- */
+
+.defense-hero {
+    position: relative;
+    width: 100%;
+    height: clamp(340px, 62vh, 560px);
+    margin-bottom: 3.5rem;
+    overflow: hidden;
+    /* Matches the cover's own background, so the image has nothing to butt against. */
+    background-color: #020e15;
+}
+
+.defense-hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Keep the gold summit in frame as the viewport narrows. */
+    object-position: 68% 50%;
+}
+
+/* Two gradients: one dissolves the image into the page's black at the bottom,
+   the other darkens the left so the title always has quiet ground to sit on. */
+.defense-hero-veil {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.12) 58%, rgba(0, 0, 0, 0.82) 88%, #000 100%),
+        linear-gradient(to right, rgba(2, 14, 21, 0.78) 0%, rgba(2, 14, 21, 0.42) 40%, rgba(2, 14, 21, 0) 68%);
+}
+
+.defense-hero-copy {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 3rem;
+    width: 100%;
+    max-width: 620px;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+
+.defense-hero-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #c8c8c8;
+    margin: 1rem 0 0 0;
+}
+
+.defense-hero-sep {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--defense-gold-dim);
+}
+
+.defense-hero-credit {
+    position: absolute;
+    right: 1.5rem;
+    bottom: 1.25rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #5a5a5a;
+    margin: 0;
 }
 
 .defense-label {
@@ -22,17 +106,18 @@
     font-size: 0.75rem;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: #777;
+    color: var(--defense-gold);
     margin: 0 0 0.75rem 0;
 }
 
 .defense-title {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 3rem;
+    font-size: clamp(3rem, 7vw, 4.5rem);
     letter-spacing: 4px;
     line-height: 0.9;
-    margin: 0 0 1.5rem 0;
+    margin: 0;
     color: #fff;
+    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.8);
 }
 
 .defense-desc {
@@ -45,7 +130,7 @@
 
 /* Thesis block */
 .defense-thesis {
-    border-left: 2px solid #2a2a2a;
+    border-left: 2px solid var(--defense-gold-dim);
     padding: 0.25rem 0 0.25rem 1.25rem;
     margin-bottom: 2.25rem;
 }
@@ -142,7 +227,7 @@
     line-height: 1.8;
     color: #999;
     font-weight: 300;
-    border-left: 2px solid #4a3a1a;
+    border-left: 2px solid var(--defense-gold-dim);
     padding-left: 1.25rem;
     margin: 0 0 2rem 0;
 }
@@ -418,8 +503,20 @@
 }
 
 @media screen and (max-width: 480px) {
-    .defense { padding: 2.5rem 1.25rem 3rem; }
-    .defense-title { font-size: 2.6rem; }
+    .defense { padding: 0 0 3rem; }
+    .defense-inner { padding: 0 1.25rem; }
+    .defense-hero {
+        height: clamp(280px, 48vh, 380px);
+        margin-bottom: 2.5rem;
+    }
+    .defense-hero-image { object-position: 72% 50%; }
+    .defense-hero-copy { padding: 0 1.25rem; bottom: 2rem; }
+    .defense-hero-meta {
+        font-size: 0.85rem;
+        letter-spacing: 1.5px;
+        gap: 0.6rem;
+    }
+    .defense-hero-credit { display: none; }
     .defense-detail { flex-wrap: wrap; }
     .defense-actions .defense-action { flex: 1 1 auto; text-align: center; }
     .rsvp-options { flex-direction: column; }

@@ -84,10 +84,28 @@ const Defense = () => {
         <>
             <Navigation />
             <section className="defense">
-                <div className="defense-inner">
-                    <p className="defense-label">You are invited to</p>
-                    <h1 className="defense-title">Ali's PhD Defense</h1>
+                <div className="defense-hero">
+                    <img
+                        src="thesis-cover.jpg"
+                        alt="The cover of the thesis: stone staircases rising through the dark toward a gold-topped summit"
+                        className="defense-hero-image"
+                    />
+                    <div className="defense-hero-veil" />
+                    <div className="defense-hero-copy">
+                        <p className="defense-label">You are invited to</p>
+                        <h1 className="defense-title">Ali's PhD Defense</h1>
+                        <p className="defense-hero-meta">
+                            <span>23 October 2026</span>
+                            <span className="defense-hero-sep" />
+                            <span>12:30</span>
+                            <span className="defense-hero-sep" />
+                            <span>Aula, TU Delft</span>
+                        </p>
+                    </div>
+                    <p className="defense-hero-credit">From the cover of the thesis</p>
+                </div>
 
+                <div className="defense-inner">
                     <p className="defense-desc">
                         I will publicly defend my doctoral thesis at Delft University of Technology.
                         I would be delighted to have you there.
