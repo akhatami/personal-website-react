@@ -191,7 +191,7 @@ const Defense = () => {
                                 <p>
                                     {form.attending === 'yes'
                                         ? 'Your RSVP is in — I look forward to seeing you on 23 October.'
-                                        : 'Thanks for letting me know. You will be missed!'}
+                                        : 'Noted — I hope it works out. Let me know if things become clearer.'}
                                 </p>
                             </div>
                         ) : (
@@ -247,15 +247,15 @@ const Defense = () => {
                                             />
                                             Yes, I'll be there
                                         </label>
-                                        <label className={form.attending === 'no' ? 'rsvp-option selected' : 'rsvp-option'}>
+                                        <label className={form.attending === 'maybe' ? 'rsvp-option selected' : 'rsvp-option'}>
                                             <input
                                                 type="radio"
                                                 name="attending"
-                                                value="no"
-                                                checked={form.attending === 'no'}
+                                                value="maybe"
+                                                checked={form.attending === 'maybe'}
                                                 onChange={handleChange}
                                             />
-                                            Sorry, I can't make it
+                                            Maybe
                                         </label>
                                     </div>
                                 </fieldset>
