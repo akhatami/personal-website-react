@@ -44,8 +44,9 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Keep the gold summit in frame as the viewport narrows. */
-    object-position: 68% 50%;
+    /* Keep the gold summit in frame as the viewport narrows, and sit low in the
+       frame: the top half of the cover is empty dark. Phones override this. */
+    object-position: 68% 62%;
 }
 
 /* Two gradients: one dissolves the image into the page's black at the bottom,
