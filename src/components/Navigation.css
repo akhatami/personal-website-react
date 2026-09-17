@@ -48,22 +48,6 @@
     opacity: 0.7;
 }
 
-.navigation ul li a.nav-highlight,
-.navigation ul li a.nav-highlight:visited {
-    color: #ddd;
-}
-
-.navigation ul li a.nav-highlight::before {
-    content: '';
-    display: inline-block;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: #fff;
-    margin-right: 0.5rem;
-    vertical-align: middle;
-}
-
 @media screen and (max-width: 480px) {
     .navigation ul li a {
         padding: 0.75rem 1rem;
