@@ -7,6 +7,17 @@ const Navigation = () => {
         <nav className="navigation">
             <ul>
                 <li>
+                    <a
+                        href="https://khatalist.nl"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="nav-external"
+                        title="KHATALIST — the alter ego"
+                    >
+                        /alter-ego
+                    </a>
+                </li>
+                <li>
                     <Link to="/about">/about</Link>
                 </li>
                 <li>

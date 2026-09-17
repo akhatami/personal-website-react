@@ -38,6 +38,16 @@
     border-bottom: none;
 }
 
+/* Leaves the site (KHATALIST, the alter ego), so it carries an arrow rather
+   than passing for one of the internal /paths. */
+.navigation ul li a.nav-external::after {
+    content: '\2197';
+    font-size: 0.75em;
+    margin-left: 0.4rem;
+    vertical-align: middle;
+    opacity: 0.7;
+}
+
 .navigation ul li a.nav-highlight,
 .navigation ul li a.nav-highlight:visited {
     color: #ddd;
