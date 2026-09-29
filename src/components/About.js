@@ -23,15 +23,18 @@ const About = () => (
                 and engineering to analytics and decision-support tools.
             </p>
             <p>
-                I'm also soon defending my PhD in Software Engineering at TU Delft under the supervision of
-                Prof. <a href="https://azaidman.github.io/" target="_blank" rel="noopener noreferrer">Andy Zaidman</a>,
-                with the thesis{' '}
-                <em>Understanding Software Quality Assurance in Open-Source Communities: Awareness, Adoption, and Tool Utilization</em>.
-                My research investigates how software teams adopt and use quality assurance practices at scale — including
-                CI/CD, automated testing, and code review across the GitHub ecosystem. Through large-scale empirical studies,
-                I've developed an evidence-based perspective on how quality assurance practices are adopted in the real world,
-                what separates successful implementations from unsuccessful ones, and how organizations can turn engineering
-                best practices into measurable outcomes.
+                I'm currently completing my PhD in Software Engineering at TU Delft, under the supervision of Prof.
+                <a href="https://azaidman.github.io/" target="_blank" rel="noopener noreferrer">Andy Zaidman</a>,
+                with my public defense scheduled for 23 October 2026. My thesis,
+                <em>Understanding Software Quality Assurance in Open-Source Communities: Awareness, Adoption, and
+                    Tool Utilization</em>, explores how software teams adopt and use quality assurance practices
+                in open-source software communities.
+
+                My research focuses on practices such as CI/CD, automated testing, code review, and related
+                quality assurance mechanisms across the GitHub ecosystem. Through large-scale empirical studies,
+                I examine how these practices are adopted and applied in real-world projects, with the broader
+                goal of understanding how software engineers reason about, implement, and maintain software quality
+                in open-source communities.
             </p>
             <p>
                 More recently, I've focused on AI engineering — building (intelligent) systems and integrating AI agents
