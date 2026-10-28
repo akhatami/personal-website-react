@@ -5,7 +5,7 @@ import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import './Navigation.css';
 
 const Navigation = () => {
-    // Phones only: the five items do not fit one line, so they collapse behind
+    // Phones only: the four items do not fit one line, so they collapse behind
     // this toggle. On wider screens the CSS hides the button and the list is
     // always a row, so the state is simply never used.
     const [open, setOpen] = useState(false);
@@ -34,9 +34,6 @@ const Navigation = () => {
                 </li>
                 <li>
                     <Link to="/contact" onClick={close}>/contact</Link>
-                </li>
-                <li>
-                    <Link to="/defense" onClick={close}>/defense</Link>
                 </li>
                 <li>
                     <a
