@@ -15,7 +15,7 @@ const HomePage = () => {
                     <div className="intro-image">
                         <img src="avatar-personal.jpeg" alt="Ali Khatami" className="profile-photo" />
                         <h1 className="name">Ali Khatami</h1>
-                        <p className="tagline">Data Engineer<br />PhD Candidate</p>
+                        <p className="tagline">Data Engineer<br />PhD in Software Engineering</p>
                         <div className="identity-meta">
                             <span className="identity-meta-item">TU Delft</span>
                             <span className="identity-meta-item">Delft, NL</span>

@@ -9,7 +9,7 @@ const Education = () => {
             <h2><FontAwesomeIcon icon={faGraduationCap} /> Education</h2>
             <ul>
                 <li>
-                    <i>PhD in Software Engineering, 2025</i>
+                    <i>PhD in Software Engineering, 2026</i>
                     <div className="description">Delft University of Technology, NL</div>
                 </li>
                 <li>
